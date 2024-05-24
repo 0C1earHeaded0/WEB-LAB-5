@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let daysInMonth = 30; //Будем считать, что в месяце 30 дней
+        let hoursInDay = 24;
+
+        function secondsInHours(hours){
+            return hours * 60 * 60;
+        }
+
+        function secondsInDays(days) {
+            return secondsInHours(hoursInDay) * days;
+        }
+
+        function secondsInMonths(months) {
+            return secondsInDays(daysInMonth) * months; 
+        }
+
+        console.log(secondsInHours(1));
+        console.log(secondsInDays(1));
+        console.log(secondsInMonths(1));
+    </script>
+</body>
+</html>

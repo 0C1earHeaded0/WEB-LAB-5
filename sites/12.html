@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [12, 15, 11, 6, 10, 22, 101, 253];
+
+        function sumOfSquaredEvenItems(array) {
+            return array.map(item => item % 2 == 0? item : 0).reduce((sum, curItem) => sum + Math.pow(curItem, 2), 0);
+        }
+
+        alert(sumOfSquaredEvenItems(arr));
+    </script>
+</body>
+</html>
