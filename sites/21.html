@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function countMonthPayment(amount, percent, years) {
+            let monthPercent = (percent/12)/100;
+            let months = years * 12;
+            return amount * ((monthPercent * Math.pow(1+monthPercent, months))/(Math.pow(1+monthPercent, months)-1));
+        }
+
+        function countOverpayment(amount, percent, years) {
+            let months = years * 12;
+            return countMonthPayment(amount, percent, years) * months - amount;
+        }
+
+        let overpayment = countOverpayment(2000000, 10, 5);
+
+        console.log(overpayment);
+    </script>
+</body>
+</html>
